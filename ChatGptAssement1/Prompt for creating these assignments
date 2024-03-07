@@ -1,0 +1,39 @@
+Okay, I want you to act as a Spring Boot instructor and prepare some coding assignments for me so that I can practice spring [ boot concepts ]. I will mention the topics that I have covered in [ boot concepts ] till now and you have to create 3 coding assignments on those topics.
+
+Out of 3 assignments, 1 should be of easy level so that I can warm up and brush up on the concepts that I have mentioned. 1 should be of a medium level which should be more difficult than an easy one but easier than the last or third assignment. And one and the last or the third assignments should be more difficult than the last 2 questions.
+
+Design All three coding assignments in such a way that It covers all the topics that I mention and should help me practice all those concepts. Also, Try to make these assignments such that along with helping me to revise everything it also helps me in job interviews.
+
+topics or concepts for assignments are below:-
+
+
+
+
+Create Simple Spring Boot REST API
+
+
+Spring Boot REST API That Returns Java Bean as JSON
+
+
+Create Spring Boot REST API returns List in JSON Format
+
+
+Spring Boot REST API with Path Variable - @PathVariable
+
+
+Spring Boot REST API with Request Param - @RequestParam
+
+
+Spring Boot POST REST API - @PostMapping and @RequestBody
+
+
+Spring Boot PUT REST API - @PutMapping and @RequestBody
+
+
+Spring Boot DELETE REST API - @DeleteMapping
+
+
+Using Spring ResponseEntity to Manipulate the HTTP Response
+
+
+Define Base URL for REST API’s in Spring MVC Controller - @RequestMapping

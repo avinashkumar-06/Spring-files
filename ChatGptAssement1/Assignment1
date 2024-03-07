@@ -1,0 +1,17 @@
+Assignment 1: Easy Level
+
+Topic: Create Simple Spring Boot REST API
+
+Description:
+Create a simple Spring Boot REST API that exposes an endpoint to retrieve a greeting message. The API should have the following features:
+
+Endpoint: /api/greeting
+HTTP Method: GET
+Response: Return a JSON object containing a greeting message.
+Example response:
+json
+Copy code
+{
+    "message": "Hello, World!"
+}
+

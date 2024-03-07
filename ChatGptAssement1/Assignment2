@@ -1,0 +1,27 @@
+Assignment 2: Medium Level
+
+Topic: Spring Boot REST API That Returns Java Bean as JSON
+
+Description:
+Create a Spring Boot REST API that manages a collection of books. Implement the following features:
+
+Endpoint: /api/books
+
+HTTP Method: GET
+
+Response: Return a JSON array of book objects.
+Example response:
+
+css
+Copy code
+[    {        "id": 1,        "title": "Book 1",        "author": "Author 1"    },    {        "id": 2,        "title": "Book 2",        "author": "Author 2"    },    ...]
+Implement CRUD operations (Create, Read, Update, Delete) for managing books.
+
+POST /api/books: Create a new book.
+GET /api/books/{id}: Retrieve a specific book by its ID.
+PUT /api/books/{id}: Update an existing book.
+DELETE /api/books/{id}: Delete a book by its ID.
+
+
+
+

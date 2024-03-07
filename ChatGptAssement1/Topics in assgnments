@@ -1,0 +1,28 @@
+Create Simple Spring Boot REST API
+
+
+Spring Boot REST API That Returns Java Bean as JSON
+
+
+Create Spring Boot REST API returns List in JSON Format
+
+
+Spring Boot REST API with Path Variable - @PathVariable
+
+
+Spring Boot REST API with Request Param - @RequestParam
+
+
+Spring Boot POST REST API - @PostMapping and @RequestBody
+
+
+Spring Boot PUT REST API - @PutMapping and @RequestBody
+
+
+Spring Boot DELETE REST API - @DeleteMapping
+
+
+Using Spring ResponseEntity to Manipulate the HTTP Response
+
+
+Define Base URL for REST API’s in Spring MVC Controller - @RequestMapping
