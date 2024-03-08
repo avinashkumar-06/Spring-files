@@ -9,7 +9,6 @@ import com.NotifEaze.NotifEaze.service.SmsService;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
@@ -27,14 +26,18 @@ import java.io.StringReader;
 public class SmsServiceImplementation implements SmsService {
 
 
-    @Value("${vendor.name}")
-    private String vendor;
+    private final String vendor;
+    private final GupshupMock gupshupMock;
 
-    @Autowired
-    private GupshupMock gupshupMock;
+    private final KayleraMock kayleraMock;
 
-    @Autowired
-    private KayleraMock kayleraMock;
+    public SmsServiceImplementation(@Value("${vendor.name}") String vendor, GupshupMock gupshupMock, KayleraMock kayleraMock) {
+        this.vendor = vendor;
+        this.gupshupMock = gupshupMock;
+        this.kayleraMock = kayleraMock;
+    }
+
+
 
     @Override
     public BaseSmsResponse sendSms(String phoneNumber, String message) {
@@ -48,7 +51,7 @@ public class SmsServiceImplementation implements SmsService {
 
 
             /*
-             I am getting message by message id and not by phone number because there is not phone number in GupshupMock class SmsMockedResponses map.
+             I am getting message by message id and not by phone number because there is no phone number in GupshupMock class SmsMockedResponses map.
               keys are message id. There are two entries in map and to get them we have to use message id which is present as key in map.
             */
             response  = gupshupMock.getSmsMockedResponses().get("MessageId1");

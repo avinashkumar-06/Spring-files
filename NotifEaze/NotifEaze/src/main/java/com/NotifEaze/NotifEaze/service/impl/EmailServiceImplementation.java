@@ -4,33 +4,28 @@ import com.NotifEaze.NotifEaze.dto.BaseEmailResponse;
 import com.NotifEaze.NotifEaze.mock.GupshupMock;
 import com.NotifEaze.NotifEaze.mock.KayleraMock;
 import com.NotifEaze.NotifEaze.service.EmailService;
-import java.util.Map;
+
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 
 
 @Service
 public class EmailServiceImplementation implements EmailService {
 
-    @Value("${vendor.name}")
-    private String vendor;
+    private final String vendor;
+    private final GupshupMock gupshupMock;
+    private final KayleraMock kayleraMock;
 
-    @Autowired
-    private GupshupMock gupshupMock;
-
-    @Autowired
-    private KayleraMock kayleraMock;
-
-
-
-
+    public EmailServiceImplementation(@Value("${vendor.name}") String vendor, GupshupMock gupshupMock, KayleraMock kayleraMock) {
+        this.vendor = vendor;
+        this.gupshupMock = gupshupMock;
+        this.kayleraMock = kayleraMock;
+    }
 
     @Override
     public BaseEmailResponse sendEmail(String to, String subject, String body) {
